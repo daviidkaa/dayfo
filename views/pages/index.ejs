@@ -1,32 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <%- include('../partials/head'); %>
-</head>
-<body class="container">
-
-    <header>
-        <%- include('../partials/header'); %>
-    </header>
-
-    <main>
-        <div class="jumbotron">
-            <h1>Top Mascots</h1>
-            <p><%= tagline %></p>
-            <ul>
-                <% mascots.forEach(function(mascot) { %>
-                    <li>
-                        <strong><%= mascot.name %></strong>
-                        representing <%= mascot.organization %>, born <%= mascot.birth_year %>
-                    </li>
-                <% }); %>
-            </ul>
+<html lang="en" data-theme="light">
+    <head>
+        <link rel="stylesheet" href="../../assets/css/index.css">
+        <link rel="stylesheet" href="../../assets/css/main.css">
+    </head>
+  <header>
+    <div id="headerLogo">
+      </a>
+    </div>
+    <nav>
+      <div class="links">
+        <a href="">Home</a>
+        <a href="#0">News</a>
+        <div class="dropdown">
+          <a href="#0" class"dropButton">Tips</a>
+          <div class="dropdownContent">
+            <a href="#0">Burger King</a>
+              <a href="#0">Southwest Airlines</a>
+              <a href="#0">Levi Strauss</a>
+          </div>
         </div>
+        <div class="dropdown">
+          <a href="#0" class"dropButton">Services</a>
+          <div class="dropdownContent">
+            <a href="#0">Print Design</a>
+              <a href="#0">Web Design</a>
+              <a href="#0">Mobile App Development</a>
+          </div>
+        </div>
+        <a href="#0">Contact</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+      <div class="bg"></div>
+      <h1 style="padding-top: 200px; text-align: center; font-size: 50px; color: white; letter-spacing: 5px;">WELCOME </h1>
+      <div class="asd">  
+      <div class="box"><lord-icon
+            src="https://cdn.lordicon.com/wcjauznf.json"
+            trigger="loop"
+            style="width:100px;height:100px; float: right">
+        </lord-icon>
+            <h1 style="font-size: 25px; padding-bottom: 30px;"> Temperature</h1>
+            
+            <hr>
+            <h1 style="padding-top: 20px;"><b style="font-weight: bold;">Today:</b> 16°C</h1>
+            <h1 style="padding-top: 20px;"><b style="font-weight: bold;">Friday:</b> 16°C</h1>
+            <h1 style="padding-top: 20px;"><b style="font-weight: bold;">Saturday:</b> 16°C</h1>
+            <h1 style="padding-top: 20px;"><b style="font-weight: bold;">Sunday:</b> 16°C</h1>
+            <h1 style="padding-top: 20px;"><b style="font-weight: bold;">Monday:</b> 16°C</h1>
+        </div>
+        <div class="box"><lord-icon
+            src="https://cdn.lordicon.com/wcjauznf.json"
+            trigger="loop"
+            style="width:100px;height:100px; float: right">
+        </lord-icon>
+            <h1 style="font-size: 25px; padding-bottom: 30px;"> Temperature</h1>
+            
+            <hr>
+            <h1 style="padding-top: 20px;"><b style="font-weight: bold;">Today:</b> 16°C</h1>
+            <h1 style="padding-top: 20px;"><b style="font-weight: bold;">Friday:</b> 16°C</h1>
+            <h1 style="padding-top: 20px;"><b style="font-weight: bold;">Saturday:</b> 16°C</h1>
+            <h1 style="padding-top: 20px;"><b style="font-weight: bold;">Sunday:</b> 16°C</h1>
+            <h1 style="padding-top: 20px;"><b style="font-weight: bold;">Monday:</b> 16°C</h1>
+        </div>
+    </div>
     </main>
-
-    <footer>
-        <%- include('../partials/footer'); %>
-    </footer>
-
-</body>
+ 
+  <script src="../../assets/js/navbar.js"></script>
+  <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
 </html>

@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Playfair+Display:400,400i,700,700i,900,900i');
+
+/*
+===============
+CSS Rest
+===============
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+}
+
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/*
+===============
+CSS Variables
+===============
+*/
+
+:root {
+  /* Text Colour */
+  --primary: #430C8C;
+  --secondary: #DCAA1B;
+  --tertiary: #11D248;
+  --white: #F5F5F5;
+  --black: #0F111B;
+  --accent: #C1262D;
+
+
+  /* Gradients */
+  --bgGradient: radial-gradient(ellipse at center, #EDEDED 0%,#FAFAFA 36%,#EBEBEB 100%);
+  --mainGradient: linear-gradient(135deg, rgba(67,12,140,0.9542017490589986) 0%, rgba(231,196,98,1) 49%, rgba(115,229,147,1) 100%);
+  --dLGradient: linear-gradient(-120deg, #4524E8 0%,rgba(71, 155, 190, 0.8) 99.87%);
+  --blackGradient: linear-gradient(152deg, rgba(61,68,74,1) 0%, rgba(46,54,61,1) 20%, rgba(56,61,65,1) 41%, rgba(53,59,64,1) 57%, rgba(63,69,74,1) 79%, rgba(55,61,66,1) 100%, rgba(157,157,157,1) 100%); 
+
+  /* Box Shadow */
+  --boxShadowPurple: 0px -1px 8.37px rgba(117, 103, 138, 0.5);
+}
+
+/* Dark Mode */
+html[data-theme='dark'] {
+  --primary: #4524E8;
+  --secondary: #C15D4F;
+  --white: #0F111B;
+  --black: #EDEDED;
+  --accent: #479BBE;
+  --whiteGradient: radial-gradient(ellipse at center, #EDEDED 0%,#FAFAFA 36%,#EBEBEB 100%);
+  --dLGradient: linear-gradient(-120deg, #3911fb 0%,rgba(71, 155, 190, 0.2) 99.87%);
+  --bgGradient: linear-gradient(152deg, rgba(61,68,74,1) 0%, rgba(46,54,61,1) 20%, rgba(56,61,65,1) 41%, rgba(53,59,64,1) 57%, rgba(63,69,74,1) 79%, rgba(55,61,66,1) 100%, rgba(157,157,157,1) 100%);
+}
+
+/*
+===============
+Base Style
+===============
+*/
+
+html {
+  font-family: lato, sans-serif;
+  font-size: 120%;
+  margin: 0px;
+  color: var(--black);
+  height: 100vh;
+}
+
+main{
+    background: linear-gradient(
+        to right, #833ab4,
+        #fd1d1d, #833ab4
+    );
+    height: 100%;
+    background-size: 400% 400%;
+    animation: xd 10s infinite ease-in-out;
+}
+
+@keyframes xd {
+    0%{
+        background-position: 0 50%
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+html,
+body {
+  background: var(--bgGradient);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/*
+===============
+Header
+===============
+*/
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 98.7%;
+  position: fixed;
+  top: 10px;
+  left: 0.6vw;
+  z-index: 100;
+  box-shadow: var(--boxShadowPurple);
+  background: var(--white);
+  border-radius: 0.8em;
+}
+
+#headerLogo img {
+  width: 25vw;
+}
+
+header nav {
+  margin-right: 1em;
+  display: flex;
+  align-items: baseline;
+}
+
+header ul {
+  display: flex;
+}
+
+.links a {
+  font-size: 0.9em;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  border-radius: 0.5em;
+  margin: 0.3em;
+  transition: all .18s ease-in-out;
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--primary);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  right: 8%;
+
+  z-index: 1;
+  margin: 0 -0.3em;
+  width: fit-content;
+
+  box-shadow: 5px 3px 8.37px rgba(69,36,232,.2);
+  background: var(--white);
+}
+
+.dropdownContent a {
+  display: block;
+  margin: 1em;
+}
+
+.dropdown:hover .dropdownContent {
+  display: block;
+}
+
+.dropdown:hover .dropButton {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+nav a:hover {
+  background: var(--primary) !important;
+  color: var(--white);
+  border-color: var(--primary);
+}
